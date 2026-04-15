@@ -1,0 +1,188 @@
+/* Configuración General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* Header y Navegación */
+header {
+    background-color: #00008b;
+    color: white;
+    padding: 12px 0;
+    border-bottom: 4px solid #000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header h1 {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 8px;
+}
+
+/* Punto 3: Efectos en enlaces - transición de 2 segundos */
+.btn-link {
+    background-color: #0000cd;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: background-color 2s, color 2s;
+}
+
+.btn-link:hover {
+    background-color: #ffffff;
+    color: #00008b;
+}
+
+/* Cuerpo Principal - Layout Desktop */
+.main-content {
+    display: flex;
+    gap: 30px;
+    margin-top: 25px;
+    padding-bottom: 10px;
+}
+
+.articles {
+    flex: 3;
+}
+
+.articles h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+article h3 {
+    font-size: 0.95rem;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #222;
+}
+
+article p {
+    font-size: 0.78rem;
+    color: #444;
+    line-height: 1.5;
+}
+
+/* Barra Lateral */
+.sidebar {
+    flex: 1;
+}
+
+.sidebar-box {
+    background-color: #0000b3;
+    color: white;
+    padding: 18px;
+    min-height: 220px;
+}
+
+.sidebar-box h4 {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.sidebar-box p {
+    font-size: 0.78rem;
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    background-color: #00008b;
+    color: white;
+    padding: 18px 0;
+    margin-top: 30px;
+}
+
+footer p {
+    font-size: 0.85rem;
+    line-height: 1.8;
+}
+
+/* Punto 2: Responsivo */
+@media (max-width: 768px) {
+
+    /* Header: nombre centrado, enlaces apilados */
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+        padding: 0 15px 12px 15px;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    nav {
+        flex-direction: column;
+        width: 100%;
+        gap: 6px;
+    }
+
+    .btn-link {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+        font-size: 0.9rem;
+        background-color: #0000cd;
+        color: white;
+    }
+
+    /* Contenido: columna única, lateral debajo de artículos */
+    .main-content {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 15px;
+        margin-top: 20px;
+    }
+
+    .articles {
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar-box {
+        min-height: auto;
+        padding: 16px;
+    }
+
+    /* Footer adaptado */
+    footer {
+        margin-top: 20px;
+    }
+}
