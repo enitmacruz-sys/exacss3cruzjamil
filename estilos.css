@@ -1,188 +1,70 @@
-/* Configuración General */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen CSS3</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
 
-body {
-    background-color: #f5f5f5;
-}
+    <!-- HEADER -->
+    <header>
+        <div class="container nav-container">
+            <h1>Aqui coloca tu nombre</h1>
+            <nav>
+                <a href="#" class="btn-link">Enlace 1</a>
+                <a href="#" class="btn-link">Enlace 2</a>
+                <a href="#" class="btn-link">Enlace 3</a>
+            </nav>
+        </div>
+    </header>
 
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
-    width: 100%;
-}
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="container main-content">
 
-/* Header y Navegación */
-header {
-    background-color: #00008b;
-    color: white;
-    padding: 12px 0;
-    border-bottom: 4px solid #000;
-}
+        <!-- ARTÍCULOS -->
+        <section class="articles">
+            <h2>Artículo</h2>
 
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
+            <article>
+                <h3>Categoría 1</h3>
+                <p>Aquí debes detallar la información relacionada al primer artículo del sitio web que estás generando. Este artículo tiene una categoría 1, es decir, es la más importante dentro de la página web que estás construyendo.</p>
+            </article>
 
-header h1 {
-    font-size: 1.1rem;
-    font-weight: bold;
-}
+            <article>
+                <h3>Categoría 2</h3>
+                <p>Este es otro artículo de la sección de contenido de tu sitio web, sin embargo, su categoría es inferior al tema principal del sitio colocado anteriormente. Este artículo corresponde a la segunda categoría, relacionada a la importancia de la información dentro del sitio web.</p>
+            </article>
 
-nav {
-    display: flex;
-    gap: 8px;
-}
+            <article>
+                <h3>Categoría 3</h3>
+                <p>Este es otro artículo de la sección de contenido de tu sitio web, sin embargo, su categoría es inferior al tema principal del sitio colocado anteriormente. Este artículo corresponde a la segunda categoría, relacionada a la importancia de la información dentro del sitio web.</p>
+            </article>
 
-/* Punto 3: Efectos en enlaces - transición de 2 segundos */
-.btn-link {
-    background-color: #0000cd;
-    color: white;
-    padding: 8px 16px;
-    text-decoration: none;
-    font-size: 0.85rem;
-    transition: background-color 2s, color 2s;
-}
+            <article>
+                <h3>Categoría 3</h3>
+                <p>Información adicional que puede aparecer en un sitio web dentro de la sección del contenido principal.</p>
+            </article>
+        </section>
 
-.btn-link:hover {
-    background-color: #ffffff;
-    color: #00008b;
-}
+        <!-- LATERAL -->
+        <aside class="sidebar">
+            <div class="sidebar-box">
+                <h4>Lateral</h4>
+                <p>Aquí se coloca la información lateral de nuestro sitio web, teniendo en cuenta que, se puede aprovechar en fines publicitarios o para destacar ciertos detalles que consideres importantes.</p>
+            </div>
+        </aside>
 
-/* Cuerpo Principal - Layout Desktop */
-.main-content {
-    display: flex;
-    gap: 30px;
-    margin-top: 25px;
-    padding-bottom: 10px;
-}
+    </div>
 
-.articles {
-    flex: 3;
-}
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>Pié de página</p>
+            <p>examen de css3</p>
+        </div>
+    </footer>
 
-.articles h2 {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-}
-
-article {
-    margin-bottom: 20px;
-}
-
-article h3 {
-    font-size: 0.95rem;
-    font-weight: bold;
-    margin-bottom: 6px;
-    color: #222;
-}
-
-article p {
-    font-size: 0.78rem;
-    color: #444;
-    line-height: 1.5;
-}
-
-/* Barra Lateral */
-.sidebar {
-    flex: 1;
-}
-
-.sidebar-box {
-    background-color: #0000b3;
-    color: white;
-    padding: 18px;
-    min-height: 220px;
-}
-
-.sidebar-box h4 {
-    font-size: 0.95rem;
-    margin-bottom: 10px;
-}
-
-.sidebar-box p {
-    font-size: 0.78rem;
-    line-height: 1.5;
-}
-
-/* Footer */
-footer {
-    background-color: #00008b;
-    color: white;
-    padding: 18px 0;
-    margin-top: 30px;
-}
-
-footer p {
-    font-size: 0.85rem;
-    line-height: 1.8;
-}
-
-/* Punto 2: Responsivo */
-@media (max-width: 768px) {
-
-    /* Header: nombre centrado, enlaces apilados */
-    .nav-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        text-align: center;
-        padding: 0 15px 12px 15px;
-    }
-
-    header h1 {
-        font-size: 1.2rem;
-        text-align: center;
-        width: 100%;
-    }
-
-    nav {
-        flex-direction: column;
-        width: 100%;
-        gap: 6px;
-    }
-
-    .btn-link {
-        display: block;
-        width: 100%;
-        text-align: center;
-        padding: 12px;
-        font-size: 0.9rem;
-        background-color: #0000cd;
-        color: white;
-    }
-
-    /* Contenido: columna única, lateral debajo de artículos */
-    .main-content {
-        flex-direction: column;
-        gap: 20px;
-        padding: 0 15px;
-        margin-top: 20px;
-    }
-
-    .articles {
-        width: 100%;
-    }
-
-    .sidebar {
-        width: 100%;
-    }
-
-    .sidebar-box {
-        min-height: auto;
-        padding: 16px;
-    }
-
-    /* Footer adaptado */
-    footer {
-        margin-top: 20px;
-    }
-}
+</body>
+</html>
